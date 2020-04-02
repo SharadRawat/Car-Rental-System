@@ -1,0 +1,9 @@
+# Ignore the build files
+/bazel-bin
+/bazel-out
+/bazel-CarRentalSystem
+/bazel-testlogs
+/googletest
+
+# Ignore VScode file
+*.vscode
