@@ -12,6 +12,7 @@ public:
     virtual bool AnyPendingOrder();
     virtual rentalmanager::Car GetPendingOrder();
     virtual std::array<rentalmanager::Car, rentalmanager::kMaxNumOfCars> RequestCarOptions();
+    virtual rentalmanager::Car ChooseACar(const std::string &chosen_car);
     virtual void Book();
 };
 

@@ -11,4 +11,15 @@ rentalmanager::Car UserClient::GetPendingOrder()
 }
 
 std::array<rentalmanager::Car, rentalmanager::kMaxNumOfCars> UserClient::RequestCarOptions(){};
-void UserClient::Book(){};
+
+rentalmanager::Car UserClient::ChooseACar(const std::string &chosen_car)
+{
+    // TODO
+    std::vector<rentalmanager::Car> car_list = car_->GetListOfCars();
+};
+
+void UserClient::Book()
+{
+    // TODO
+    pending_order_ = true;
+};
