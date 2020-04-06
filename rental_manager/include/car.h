@@ -21,16 +21,21 @@ private:
     double mileage_{};
     // Whether the car is booked or not
     bool car_is_booked_{false};
-    // Vector to store all the available cars with their information
-    static std::vector<rentalmanager::Car> car_list_;
 
 public:
     Car(/* args */);
     ~Car();
-    std::vector<rentalmanager::Car> GetListOfCars() const { return car_list_; }
-    void SetACarToCarList(const rentalmanager::Car &car) { car_list_.emplace_back(car); }
+
+    void SetCarIsBooked(bool status) { car_is_booked_ = status; }
     std::string GetCarModel() const { return car_model_; }
+    std::uint32_t GetCarAvailabilityDuration() const { return availability_duration_; }
+    std::uint32_t GetPerDayCost() { return per_day_cost; }
 };
+
+// Vector to store all the available cars with their information
+static std::vector<rentalmanager::Car> car_list;
+
+void SetACarToCarList(const rentalmanager::Car &car) { car_list.emplace_back(car); }
 
 // Maximum number of cars available
 const std::uint32_t kMaxNumOfCars{10};

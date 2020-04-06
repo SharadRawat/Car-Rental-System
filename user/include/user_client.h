@@ -12,9 +12,10 @@ public:
 
     bool AnyPendingOrder() override;
     rentalmanager::Car GetPendingOrder() const override;
-    std::array<rentalmanager::Car, rentalmanager::kMaxNumOfCars> RequestCarOptions() const override;
+    std::vector<rentalmanager::Car> RequestCarOptions() const override;
     rentalmanager::Car ChooseACar(const std::string &chosen_car) override;
-    void BookACar() override;
+    void BookACar(rentalmanager::Car &chosen_car) override;
+    void ReturnCar() override;
 
 private:
     std::uint32_t client_number_{};
