@@ -10,10 +10,10 @@ class IUserClient
 public:
     virtual ~IUserClient();
     virtual bool AnyPendingOrder();
-    virtual rentalmanager::Car GetPendingOrder();
-    virtual std::array<rentalmanager::Car, rentalmanager::kMaxNumOfCars> RequestCarOptions();
+    virtual rentalmanager::Car GetPendingOrder() const;
+    virtual std::array<rentalmanager::Car, rentalmanager::kMaxNumOfCars> RequestCarOptions() const;
     virtual rentalmanager::Car ChooseACar(const std::string &chosen_car);
-    virtual void Book();
+    virtual void BookACar();
 };
 
 #endif // USER_IUSER_CLIENT_H

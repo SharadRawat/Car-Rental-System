@@ -27,8 +27,9 @@ private:
 public:
     Car(/* args */);
     ~Car();
-    std::vector<rentalmanager::Car> GetListOfCars() { return car_list_; }
+    std::vector<rentalmanager::Car> GetListOfCars() const { return car_list_; }
     void SetACarToCarList(const rentalmanager::Car &car) { car_list_.emplace_back(car); }
+    std::string GetCarModel() const { return car_model_; }
 };
 
 // Maximum number of cars available
