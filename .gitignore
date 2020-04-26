@@ -1,7 +1,7 @@
 # Ignore the build files
 /bazel-bin
 /bazel-out
-/bazel-CarRentalSystem
+/bazel-Car-Rental-System
 /bazel-testlogs
 /googletest
 
