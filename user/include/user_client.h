@@ -8,7 +8,8 @@ class UserClient : public IUserClient
 
 public:
     UserClient();
-    ~UserClient();
+    UserClient(std::uint32_t client_number, rentalmanager::Car chosen_car, bool pending_order, std::unique_ptr<rentalmanager::Car> car);
+    ~UserClient() = default;
 
     bool AnyPendingOrder() override;
     rentalmanager::Car GetPendingOrder() const override;
